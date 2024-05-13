@@ -5,9 +5,9 @@ using namespace std;
 class mahasiswa
 {
 private:
-    static int nim;
+    static long long int nim;
 public:
-    int id;
+    long long int id;
     string nama;
 
     void setID();
@@ -22,7 +22,7 @@ public:
             setID();
     }
 };
-long int mahasiswa::nim = 20230140101;
+long long int mahasiswa::nim = 20230140101;
 
 void mahasiswa::setID()
 {
@@ -32,10 +32,23 @@ void mahasiswa::setID()
 void mahasiswa::printAll()
 {
     cout << "ID =" << id << endl;
+    cout << "Nama =" << nama << endl;
+    cout << endl;
 }
 
 int main()
 {
-    
+    mahasiswa mhs1("Kairi Kumar");
+    mahasiswa mhs2("Bagus Adnan");
+    mahasiswa::setNim(9);
+    mahasiswa mhs3("Nayo jomok");
+    mahasiswa mhs4("Imron");
+
+    mhs1.printAll();
+    mhs2.printAll();
+    mhs3.printAll();
+    mhs4.printAll();
+
+    cout << "akses dari luar object = " << mahasiswa::getNim() << endl;
 }
 
