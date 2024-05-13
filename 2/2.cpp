@@ -22,8 +22,7 @@ public:
             setID();
     }
 };
-
-int mahasiswa::nim = 20230140101;
+long int mahasiswa::nim = 20230140101;
 
 void mahasiswa::setID()
 {
