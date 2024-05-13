@@ -16,12 +16,27 @@ public:
     static void setNim(int pNim) { nim = pNim; }
     static int getNim() { return nim; }
 
-    mahasiswa(string pnama) : nama(pnama) { setID(); }
-
+    mahasiswa(string pnama)
+    {
+        nama = pnama;
+            setID();
+    }
 };
+
+int mahasiswa::nim = 20230140101;
+
+void mahasiswa::setID()
+{
+    id = ++nim;
+}
+
+void mahasiswa::printAll()
+{
+    cout << "ID =" << id << endl;
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    
 }
 
